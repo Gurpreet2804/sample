@@ -17,8 +17,8 @@ public:
     friend std::ostream &operator<<(std::ostream &os, const Point &obj)
     {
         return os
-               << "x: " << obj.x
-               << " y: " << obj.y;
+               << "x ->: " << obj.x
+               << " y ->: " << obj.y;
     }
 
     static Point NewCartesian(float x, float y)
