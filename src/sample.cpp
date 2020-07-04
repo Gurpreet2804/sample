@@ -32,7 +32,7 @@ public:
     }
 };
 
-int main()
+int main_sample()
 {
     auto p = Point::NewPolar(5, M_PI_4);
     std::cout << p << std::endl;

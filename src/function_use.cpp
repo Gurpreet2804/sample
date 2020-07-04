@@ -4,9 +4,6 @@
 #include <array>
 #include <vector>
 
-int foo(int b) { std::cout << " int  = " << b << std::endl; }
-int foo1(int a) { std::cout << " int  = " << a << std::endl; }
-
 struct Button
 {
     std::vector<std::function<int(int)>> signals;
@@ -19,7 +16,7 @@ struct Button
     }
 };
 
-int main_1()
+int main_fu()
 {
     Button b;
     b += [](int i) { std::cout << " -> " << i << std::endl; return i; };
@@ -27,5 +24,6 @@ int main_1()
 
     std::cout << b.signals[0](3) << std::endl;
     std::cout << b.signals[1](4) << std::endl;
-    ;
+
+    return 0;
 }
