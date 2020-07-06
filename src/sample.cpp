@@ -2,6 +2,8 @@
 #include <cmath>
 #include <iostream>
 
+namespace 
+{
 using namespace std;
 
 class Point
@@ -31,7 +33,7 @@ public:
         return {r * cos(theta), r * sin(theta)};
     }
 };
-
+}
 int main_sample()
 {
     auto p = Point::NewPolar(5, M_PI_4);

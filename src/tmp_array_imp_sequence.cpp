@@ -4,6 +4,10 @@
 #include <type_traits>
 #include <utility>
 #include <cassert>
+
+namespace 
+{
+    
 using MyArray = std::array<int, 6>;
 
 template<typename F, typename Array, std::size_t... Is>
@@ -21,8 +25,9 @@ std::size_t  array_sum(F&& f, Array&& arr)
         std::forward<Array>(arr),
         std::make_index_sequence<arr.size()>{});
 }
+}
 
-int main()
+int main_tmp_ais()
 {
     MyArray myarray{1,2,3,4,5,6};
 
